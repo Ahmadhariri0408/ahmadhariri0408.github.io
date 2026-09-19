@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سياسة الخصوصية | مدوّنة وعي</title>
+  <meta name="description" content="سياسة الخصوصية لموقع مدوّنة وعي — كيف نجمع البيانات ونستخدم ملفات تعريف الارتباط وإعلانات جوجل، وحقوق الزوار، وطرق التواصل." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="سياسة الخصوصية | Privacy Policy — مدوّنة وعي / Mindful Blog" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 21c-4.5-2.6-8-5.9-8-10.2A4.8 4.8 0 0 1 12 7.6a4.8 4.8 0 0 1 8 3.2C20 15.1 16.5 18.4 12 21Z'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#f3f1ff", 100: "#e7e3ff", 200: "#cfc6ff", 400: "#8b7bf0",
+              500: "#6c5ce7", 600: "#5a45d6", 700: "#4634ab", 900: "#241a5c"
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- تثبيت الوضع الفاتح/الداكن قبل الرسم لمنع وميض التبديل (FOUC) -->
+  <script>
+    (function () {
+      var m = localStorage.getItem("mindful_mode");
+      if (m !== "dark" && m !== "light") {
+        m = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.mode = m;
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/i18n.js"></script>
+
+  <!-- Google AdSense: فعّل بعد الموافقة
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+</head>
+
+<body data-page="privacy"
+      data-title-ar="سياسة الخصوصية | مدوّنة وعي"
+      data-title-en="Privacy Policy | Mindful Blog">
+
+  <!-- المشهد الخلفي التفاعلي -->
+  <div class="bg-scene" aria-hidden="true">
+    <span class="bg-shape s1" data-speed="-0.5"><i></i></span>
+    <span class="bg-shape s2" data-speed="0.35"><i></i></span>
+    <span class="bg-shape s3" data-speed="0.6"><i></i></span>
+    <span class="bg-shape s4" data-speed="-0.25"><i></i></span>
+  </div>
+
+  <div id="headerHost"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container-narrow">
+        <span class="hero-badge" data-lang="ar">وثيقة قانونية</span>
+        <span class="hero-badge" data-lang="en" hidden>Legal document</span>
+
+        <h1 data-lang="ar">سياسة الخصوصية</h1>
+        <h1 data-lang="en" hidden>Privacy Policy</h1>
+
+        <!-- تاريخ آخر تحديث للوثيقة (يظهر مباشرة تحت العنوان الرئيسي) -->
+        <span class="updated-tag updated-tag--title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M8 3v4M16 3v4M3 10h18" />
+          </svg>
+          <span data-lang="ar">آخر تحديث: 19 سبتمبر 2026</span>
+          <span data-lang="en" hidden>Last updated: 19 September 2026</span>
+        </span>
+
+        <p data-lang="ar">
+          توضح هذه الصفحة ما نجمعه من معلومات عن زوار موقع «مدوّنة وعي»، وكيف نستخدمها، وما حقوقك كزائر،
+          إضافة إلى سياسة ملفات تعريف الارتباط والإعلانات.
+        </p>
+        <p data-lang="en" hidden>
+          This page explains what information we collect from visitors to Mindful Blog, how we use it, what your rights
+          are, and our cookie and advertising practices.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-narrow">
+        <div class="info-card">
+          <div class="legal-body">
+
+            <!-- ============ 1 ============ -->
+            <h2 data-lang="ar">1. مقدمة ونطاق السياسة</h2>
+            <h2 data-lang="en" hidden>1. Introduction and scope</h2>
+
+            <p data-lang="ar">
+              موقع «مدوّنة وعي» (ويُشار إليه في هذه الصفحة بـ«الموقع») هو مدوّنة تثقيفية مستقلة في مجالات علم النفس
+              وتطوير الذات ولغة الجسد والعلاقات الإنسانية. باستخدامك لهذا الموقع فإنك توافق على الممارسات الموضّحة في
+              هذه السياسة. إن كنت لا توافق عليها، فيرجى عدم استخدام الموقع.
+            </p>
+            <p data-lang="en" hidden>
+              Mindful Blog (referred to here as “the Site”) is an independent educational blog covering psychology,
+              self-development, body language and human relationships. By using the Site you agree to the practices
+              described in this policy. If you do not agree, please do not use the Site.
+            </p>
+
+            <!-- ============ 2 ============ -->
+            <h2 data-lang="ar">2. المعلومات التي نجمعها</h2>
+            <h2 data-lang="en" hidden>2. Information we collect</h2>
+
+            <p data-lang="ar">قد نجمع نوعين من المعلومات:</p>
+            <p data-lang="en" hidden>We may collect two kinds of information:</p>
+
+            <h3 data-lang="ar">أ) معلومات تُرسلها طوعاً</h3>
+            <h3 data-lang="en" hidden>a) Information you provide voluntarily</h3>
+            <ul data-lang="ar">
+              <li>عنوان بريدك الإلكتروني إذا اشتركت في النشرة البريدية أو راسلتنا مباشرة.</li>
+              <li>محتوى الرسائل التي ترسلها إلينا عبر البريد أو نماذج التواصل.</li>
+              <li>أي معلومة تكتبها اختيارياً في التعليقات (إن فُعّلت مستقبلاً).</li>
+            </ul>
+            <ul data-lang="en" hidden>
+              <li>Your email address if you subscribe to our newsletter or contact us directly.</li>
+              <li>The content of messages you send us by email or through contact forms.</li>
+              <li>Anything you choose to write in comments (if enabled in the future).</li>
+            </ul>
+
+            <h3 data-lang="ar">ب) معلومات تُجمع تلقائياً</h3>
+            <h3 data-lang="en" hidden>b) Information collected automatically</h3>
+            <ul data-lang="ar">
+              <li>نوع المتصفح ونظام الجهاز واللغة المفضّلة ودقة الشاشة.</li>
+              <li>عنوان بروتوكول الإنترنت (IP) بصيغة مجمّعة أو مقطوعة الأجزاء لأغراض إحصائية.</li>
+              <li>الصفحات التي تزورها، ومدة الزيارة، والصفحة التي جئت منها.</li>
+              <li>تفضيل اللغة الذي يحفظه الموقع محلياً في متصفحك لعرض الواجهة بالعربية أو الإنجليزية.</li>
+            </ul>
+            <ul data-lang="en" hidden>
+              <li>Browser type, device operating system, preferred language and screen resolution.</li>
+              <li>IP address in aggregated or truncated form for statistical purposes.</li>
+              <li>Pages you visit, time spent, and the referring page.</li>
+              <li>The language preference this Site stores locally in your browser to display Arabic or English.</li>
+            </ul>
+
+            <p data-lang="ar">
+              لا نطلب ولا نجمع معلومات حساسة مثل البيانات الصحية أو الدينية أو السياسية، ولا نطلب معلومات بطاقات
+              الدفع، لأن الموقع لا يبيع أي منتج أو خدمة.
+            </p>
+            <p data-lang="en" hidden>
+              We do not request or collect sensitive information such as health, religious or political data, and we do
+              not request payment card details, because the Site sells no products or services.
+            </p>
+
+            <!-- ============ 3 ============ -->
+            <h2 data-lang="ar">3. كيف نستخدم المعلومات</h2>
+            <h2 data-lang="en" hidden>3. How we use information</h2>
+
+            <ul data-lang="ar">
+              <li>تحسين محتوى الموقع وتجربة التصفح وتنسيق العرض حسب اللغة.</li>
+              <li>إرسال النشرة البريدية لمن اشترك فيها طوعاً، مع إمكانية إلغاء الاشتراك في أي وقت.</li>
+              <li>الرد على الاستفسارات وطلبات التصحيح أو الحذف.</li>
+              <li>فهم المواضيع الأكثر قراءة لتطوير المقالات القادمة.</li>
+              <li>حماية الموقع من الاستخدام المسيء أو الاحتيالي.</li>
+            </ul>
+            <ul data-lang="en" hidden>
+              <li>Improve content, browsing experience and language-aware presentation.</li>
+              <li>Send the newsletter to those who subscribed voluntarily, with opt-out available at any time.</li>
+              <li>Answer enquiries and requests for correction or deletion.</li>
+              <li>Understand which topics are most read so we can plan future articles.</li>
+              <li>Protect the Site from abusive or fraudulent use.</li>
+            </ul>
+
+            <p data-lang="ar">
+              لا نبيع معلوماتك الشخصية لأي طرف ثالث، ولا نؤجّرها، ولا نتبادلها لأغراض تسويقية مباشرة.
+            </p>
+            <p data-lang="en" hidden>
+              We do not sell your personal information to any third party, rent it out, or trade it for direct marketing
+              purposes.
+            </p>
+
+            <!-- ============ 4 ============ -->
+            <h2 data-lang="ar">4. ملفات تعريف الارتباط (Cookies)</h2>
+            <h2 data-lang="en" hidden>4. Cookies</h2>
+
+            <p data-lang="ar">
+              ملفات تعريف الارتباط ملفات نصية صغيرة يحفظها المتصفح على جهازك. يستخدم الموقع نوعين منها:
+            </p>
+            <p data-lang="en" hidden>
+              Cookies are small text files your browser stores on your device. The Site uses two kinds:
+            </p>
+
+            <ul data-lang="ar">
+              <li><strong>ملفات ضرورية:</strong> مثل تفضيل اللغة المحفوظ محلياً (localStorage) حتى لا تحتاج إلى اختيار اللغة في كل زيارة.</li>
+              <li><strong>ملفات طرف ثالث:</strong> تضعها خدمات خارجية كـ Google AdSense وGoogle Analytics وشبكات التواصل عند استخدام أزرار المشاركة.</li>
+            </ul>
+            <ul data-lang="en" hidden>
+              <li><strong>Essential cookies:</strong> such as the language preference stored locally so you do not have to choose your language on every visit.</li>
+              <li><strong>Third-party cookies:</strong> set by external services such as Google AdSense, Google Analytics, and social networks when share buttons are used.</li>
+            </ul>
+
+            <p data-lang="ar">
+              يمكنك حذف ملفات تعريف الارتباط أو منع حفظها من إعدادات متصفحك في أي وقت. قد يؤدي تعطيل بعضها إلى فقدان
+              بعض الوظائف مثل تذكّر لغتك المفضّلة، لكن تصفح المقالات يبقى متاحاً.
+            </p>
+            <p data-lang="en" hidden>
+              You can delete cookies or block them from your browser settings at any time. Disabling some of them may
+              remove conveniences such as remembering your preferred language, but reading the articles remains fully
+              available.
+            </p>
+
+            <!-- ============ 5 ============ -->
+            <h2 data-lang="ar">5. الإعلانات وجوجل أدسنس</h2>
+            <h2 data-lang="en" hidden>5. Advertising and Google AdSense</h2>
+
+            <p data-lang="ar">
+              قد يعرض الموقع إعلانات مقدَّمة من Google AdSense أو شبكات إعلانية أخرى. تستخدم جوجل ومزوّدو الإعلانات
+              الخارجيون ملفات تعريف ارتباط لعرض إعلانات بناءً على زياراتك السابقة لهذا الموقع أو لمواقع أخرى.
+            </p>
+            <p data-lang="en" hidden>
+              The Site may display advertisements served by Google AdSense or other ad networks. Google and third-party
+              vendors use cookies to serve ads based on your prior visits to this Site or other websites.
+            </p>
+
+            <p data-lang="ar">
+              باستخدام ملف تعريف الارتباط الإعلاني (Google Advertising Cookie) وملفات <span dir="ltr">DART</span>،
+              تستطيع جوجل وشركاؤها عرض إعلانات للمستخدمين استناداً إلى زيارتهم لهذا الموقع و/أو لمواقع أخرى على
+              الإنترنت. يمكنك إلغاء الاشتراك في الإعلانات المخصّصة بزيارة
+              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener nofollow" dir="ltr">إعدادات إعلانات جوجل</a>
+              أو صفحة
+              <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener nofollow" dir="ltr">aboutads.info</a>.
+            </p>
+            <p data-lang="en" hidden>
+              Through the Google Advertising Cookie and <span dir="ltr">DART</span> cookies, Google and its partners can
+              serve ads to users based on their visit to this Site and/or other sites on the internet. You may opt out of
+              personalised advertising by visiting
+              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener nofollow">Google Ads Settings</a>
+              or <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener nofollow">aboutads.info</a>.
+            </p>
+
+            <p data-lang="ar">
+              يخضع جمع واستخدام أطراف الإعلان الثالثة لبياناتك لسياسات خصوصيتها الخاصة، ولسنا مسؤولين عن ممارساتها.
+              كما أن نقراتك على الإعلانات تخضع لشروط الجهة المعلنة.
+            </p>
+            <p data-lang="en" hidden>
+              Third-party ad networks' collection and use of your data is governed by their own privacy policies, for
+              which we are not responsible. Your clicks on advertisements are subject to the advertiser's terms.
+            </p>
+
+            <!-- ============ 6 ============ -->
+            <h2 data-lang="ar">6. خدمات التحليل الإحصائي</h2>
+            <h2 data-lang="en" hidden>6. Analytics services</h2>
+
+            <p data-lang="ar">
+              قد نستخدم أدوات تحليل مثل Google Analytics لجمع إحصاءات مجمّعة عن الزيارات (عدد الزوار، الصفحات الأكثر
+              قراءة، مدة البقاء). تُجمع هذه البيانات بصورة مجهولة قدر الإمكان ولا تُستخدم لتحديد هوية شخص بعينه.
+            </p>
+            <p data-lang="en" hidden>
+              We may use analytics tools such as Google Analytics to collect aggregated visit statistics (visitor count,
+              most-read pages, time on site). This data is collected in as anonymous a form as possible and is not used
+              to identify any individual.
+            </p>
+
+            <!-- ============ 7 ============ -->
+            <h2 data-lang="ar">7. حقوقك</h2>
+            <h2 data-lang="en" hidden>7. Your rights</h2>
+
+            <p data-lang="ar">بغضّ النظر عن بلد إقامتك، يمكنك مراسلتنا لطلب أي مما يلي:</p>
+            <p data-lang="en" hidden>Regardless of your country of residence, you may write to us to request any of the following:</p>
+
+            <ul data-lang="ar">
+              <li>معرفة ما إذا كنا نحتفظ ببيانات عنك، والحصول على نسخة منها.</li>
+              <li>تصحيح أي بيانات غير دقيقة أو ناقصة.</li>
+              <li>حذف بياناتك، بما في ذلك إلغاء اشتراكك في النشرة البريدية.</li>
+              <li>الاعتراض على معالجة بياناتك لأغراض معيّنة.</li>
+              <li>سحب موافقتك في أي وقت دون أثر رجعي على ما سبق.</li>
+            </ul>
+            <ul data-lang="en" hidden>
+              <li>To learn whether we hold data about you and obtain a copy of it.</li>
+              <li>To correct any inaccurate or incomplete data.</li>
+              <li>To delete your data, including unsubscribing from the newsletter.</li>
+              <li>To object to the processing of your data for specific purposes.</li>
+              <li>To withdraw your consent at any time, without retroactive effect.</li>
+            </ul>
+
+            <p data-lang="ar">
+              نزوّد زوارنا من الاتحاد الأوروبي والمملكة المتحدة بحقوقهم بموجب اللائحة العامة لحماية البيانات (GDPR)،
+              ولزوارنا من كاليفورنيا بحقوقهم بموجب قانون خصوصية المستهلك في كاليفورنيا (CCPA)، بما في ذلك حق المعرفة
+              وحق الحذف وحق عدم التعرّض للتمييز عند ممارسة هذه الحقوق. نستجيب للطلبات عادةً خلال 30 يوماً.
+            </p>
+            <p data-lang="en" hidden>
+              We honour the rights of visitors from the EU and UK under the General Data Protection Regulation (GDPR),
+              and of visitors from California under the California Consumer Privacy Act (CCPA), including the right to
+              know, the right to delete, and the right not to be discriminated against for exercising those rights. We
+              normally respond to requests within 30 days.
+            </p>
+
+            <!-- ============ 8 ============ -->
+            <h2 data-lang="ar">8. خصوصية الأطفال</h2>
+            <h2 data-lang="en" hidden>8. Children's privacy</h2>
+
+            <p data-lang="ar">
+              الموقع موجّه للبالغين، ولا نجمع عن قصد أي معلومات شخصية من الأطفال دون سن الثالثة عشرة. إن كنت وليّاً
+              أو وصيّاً وتعتقد أن طفلك أرسل لنا بيانات شخصية، راسلنا على البريد المذكور أدناه وسنحذفها فور التحقق.
+            </p>
+            <p data-lang="en" hidden>
+              The Site is intended for adults. We do not knowingly collect personal information from children under 13.
+              If you are a parent or guardian and believe your child has sent us personal data, contact us at the email
+              below and we will delete it once verified.
+            </p>
+
+            <!-- ============ 9 ============ -->
+            <h2 data-lang="ar">9. الروابط الخارجية</h2>
+            <h2 data-lang="en" hidden>9. External links</h2>
+
+            <p data-lang="ar">
+              قد يحتوي الموقع على روابط لمصادر خارجية للتعريف أو التوثيق. لا نملك سيطرة على محتوى تلك المواقع أو
+              سياسات خصوصيتها، ولسنا مسؤولين عنها. ننصح بقراءة سياسة خصوصية كل موقع تزوره.
+            </p>
+            <p data-lang="en" hidden>
+              The Site may link to external resources for reference or citation. We do not control the content or privacy
+              practices of those sites and are not responsible for them. We recommend reading the privacy policy of every
+              site you visit.
+            </p>
+
+            <!-- ============ 10 ============ -->
+            <h2 data-lang="ar">10. أمن المعلومات</h2>
+            <h2 data-lang="en" hidden>10. Data security</h2>
+
+            <p data-lang="ar">
+              نتخذ تدابير تقنية وتنظيمية معقولة لحماية البيانات من الوصول غير المصرّح به أو الفقدان أو التعديل، مثل
+              استخدام الاتصال المشفّر (HTTPS) وتقليل حجم البيانات المحفوظة. مع ذلك، لا يوجد نقل عبر الإنترنت آمن
+              بنسبة 100%، ولا نضمن حماية مطلقة.
+            </p>
+            <p data-lang="en" hidden>
+              We take reasonable technical and organisational measures to protect data from unauthorised access, loss or
+              alteration, such as encrypted connections (HTTPS) and minimising the amount of data retained. However, no
+              internet transmission is 100% secure and we cannot guarantee absolute protection.
+            </p>
+
+            <!-- ============ 11 ============ -->
+            <h2 data-lang="ar">11. إخلاء المسؤولية عن المحتوى</h2>
+            <h2 data-lang="en" hidden>11. Content disclaimer</h2>
+
+            <p data-lang="ar">
+              كل ما يُنشر على الموقع محتوى تثقيفي عام، ولا يُعدّ استشارة نفسية أو طبية أو قانونية، ولا يُغني عن
+              التشخيص أو العلاج من مختصّ مرخّص. استخدامك للمعلومات الواردة فيه على مسؤوليتك الخاصة.
+            </p>
+            <p data-lang="en" hidden>
+              Everything published on the Site is general educational content. It is not psychological, medical or legal
+              advice and does not replace diagnosis or treatment by a licensed professional. Any use of the information
+              here is at your own responsibility.
+            </p>
+
+            <!-- ============ 12 ============ -->
+            <h2 data-lang="ar">12. حقوق النشر والملكية الفكرية</h2>
+            <h2 data-lang="en" hidden>12. Copyright and intellectual property</h2>
+
+            <p data-lang="ar">
+              جميع المقالات والتصاميم المنشورة على هذا الموقع محمية بحقوق النشر ما لم يُذكر خلاف ذلك. يجوز اقتباس
+              فقرة قصيرة مع ذكر المصدر وإرفاق رابط المقال، ويُمنع إعادة النشر الكامل أو الترجمة التجارية دون إذن
+              كتابي مسبق.
+            </p>
+            <p data-lang="en" hidden>
+              All articles and designs published on this Site are protected by copyright unless stated otherwise. You may
+              quote a short passage with attribution and a link to the article; full republication or commercial
+              translation without prior written permission is prohibited.
+            </p>
+
+            <!-- ============ 13 ============ -->
+            <h2 data-lang="ar">13. تغييرات على هذه السياسة</h2>
+            <h2 data-lang="en" hidden>13. Changes to this policy</h2>
+
+            <p data-lang="ar">
+              قد نُحدّث هذه السياسة من وقت لآخر لمواكبة تغيّر الخدمات أو المتطلبات القانونية. يُعد تاريخ «آخر تحديث»
+              في أعلى الصفحة مرجعاً للنسخة السارية، واستمرارك في استخدام الموقع بعد التعديل يعني قبولك له.
+            </p>
+            <p data-lang="en" hidden>
+              We may update this policy from time to time to reflect changes in services or legal requirements. The
+              “Last updated” date at the top of this page indicates the current version, and continued use of the Site
+              after a change means you accept it.
+            </p>
+
+            <!-- ============ 14 ============ -->
+            <h2 data-lang="ar">14. التواصل معنا</h2>
+            <h2 data-lang="en" hidden>14. Contact us</h2>
+
+            <p data-lang="ar">
+              لأي سؤال يخص هذه السياسة، أو لممارسة حقوقك، أو لطلب حذف بياناتك، راسلنا على البريد الإلكتروني التالي:
+            </p>
+            <p data-lang="en" hidden>
+              For any question about this policy, to exercise your rights, or to request deletion of your data, email us
+              at:
+            </p>
+
+            <p class="mt-3">
+              <a href="mailto:azoznan123@gmail.com" dir="ltr" class="font-semibold">azoznan123@gmail.com</a>
+            </p>
+
+            <p data-lang="ar">سنرد على طلبك في أقرب وقت ممكن، وعادةً خلال مدة لا تتجاوز 30 يوماً.</p>
+            <p data-lang="en" hidden>We will respond to your request as soon as possible, normally within 30 days.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="about.html" class="btn btn-ghost"><span data-i18n="nav.about"></span></a>
+          <a href="index.html" class="btn btn-primary"><span data-i18n="nav.home"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerHost"></div>
+
+  <script src="assets/js/content.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

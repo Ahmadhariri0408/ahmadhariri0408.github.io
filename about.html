@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>من نحن | مدوّنة وعي</title>
+  <meta name="description" content="من نحن — مدوّنة وعي منصّة تثقيفية تهدف إلى نشر الوعي النفسي ومهارات تطوير الذات وفهم لغة الجسد وبناء علاقات إنسانية صحية." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="من نحن | About Us — مدوّنة وعي / Mindful Blog" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 21c-4.5-2.6-8-5.9-8-10.2A4.8 4.8 0 0 1 12 7.6a4.8 4.8 0 0 1 8 3.2C20 15.1 16.5 18.4 12 21Z'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#f3f1ff", 100: "#e7e3ff", 200: "#cfc6ff", 400: "#8b7bf0",
+              500: "#6c5ce7", 600: "#5a45d6", 700: "#4634ab", 900: "#241a5c"
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- تثبيت الوضع الفاتح/الداكن قبل الرسم لمنع وميض التبديل (FOUC) -->
+  <script>
+    (function () {
+      var m = localStorage.getItem("mindful_mode");
+      if (m !== "dark" && m !== "light") {
+        m = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.mode = m;
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/i18n.js"></script>
+
+  <!-- Google AdSense: فعّل بعد الموافقة
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+</head>
+
+<body data-page="about"
+      data-title-ar="من نحن | مدوّنة وعي"
+      data-title-en="About Us | Mindful Blog">
+
+  <!-- المشهد الخلفي التفاعلي -->
+  <div class="bg-scene" aria-hidden="true">
+    <span class="bg-shape s1" data-speed="-0.5"><i></i></span>
+    <span class="bg-shape s2" data-speed="0.35"><i></i></span>
+    <span class="bg-shape s3" data-speed="0.6"><i></i></span>
+    <span class="bg-shape s4" data-speed="-0.25"><i></i></span>
+  </div>
+
+  <div id="headerHost"></div>
+
+  <main>
+    <!-- ================= ترويحة الصفحة ================= -->
+    <section class="page-hero">
+      <div class="container-narrow">
+        <span class="hero-badge" data-lang="ar">من نحن</span>
+        <span class="hero-badge" data-lang="en" hidden>About us</span>
+
+        <h1 data-lang="ar">مدوّنة تثقيفية لنشر الوعي النفسي ومهارات تطوير الذات</h1>
+        <h1 data-lang="en" hidden>An educational blog for psychological awareness and self-development</h1>
+
+        <p data-lang="ar">
+          «وعي» منصّة محتوى عربي/إنجليزي مستقلة، لا تتبع جهة طبية أو تجارية. هدفنا تبسيط المعرفة النفسية
+          الموثوقة وتقديمها للقارئ بلغة واضحة، بعيداً عن التنجيم والوصفات السريعة والمبالغات المنتشرة على الإنترنت.
+        </p>
+        <p data-lang="en" hidden>
+          Mindful Blog is an independent bilingual content platform with no medical or commercial affiliation.
+          Our goal is to simplify reliable psychological knowledge and deliver it in clear language — far from
+          astrology, quick fixes and the exaggerations that fill the internet.
+        </p>
+
+        <span class="updated-tag">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" /><path d="M12 8v4l3 2" />
+          </svg>
+          <span data-lang="ar">آخر تحديث للمحتوى: سبتمبر 2026</span>
+          <span data-lang="en" hidden>Content last updated: September 2026</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- ================= رسالتنا ================= -->
+    <section class="section">
+      <div class="container-narrow">
+        <div class="info-card">
+          <h2 class="section-title" data-lang="ar">رسالتنا</h2>
+          <h2 class="section-title" data-lang="en" hidden>Our mission</h2>
+
+          <div class="legal-body mt-4">
+            <div data-lang="ar">
+              <p>
+                نؤمن أن فهم النفس ليس ترفاً فكرياً، بل مهارة حياتية أساسية. من يفهم كيف يعمل قلقه، وكيف تتشكّل عاداته،
+                وكيف يقرأ إشارات جسده وإشارات الآخرين، يتخذ قرارات أفضل ويبني علاقات أكثر صحة.
+              </p>
+              <p>
+                لذلك نلتزم بثلاثة مبادئ في كل مقال ننشره: <strong>الدقة</strong> بالاعتماد على مفاهيم علم النفس المقبولة
+                لا على الآراء الشخصية، و<strong>البساطة</strong> بشرح المصطلح قبل استخدامه، و<strong>القابلية للتطبيق</strong>
+                بإنهاء كل مقال بخطوات عملية يستطيع القارئ تنفيذها اليوم.
+              </p>
+            </div>
+
+            <div data-lang="en" hidden>
+              <p>
+                We believe understanding yourself is not an intellectual luxury but a basic life skill. Someone who
+                understands how their anxiety works, how their habits form, and how to read their own signals and those
+                of others makes better decisions and builds healthier relationships.
+              </p>
+              <p>
+                Every article we publish follows three principles: <strong>accuracy</strong> — grounded in accepted
+                psychology rather than personal opinion; <strong>simplicity</strong> — every term is explained before it
+                is used; and <strong>practicality</strong> — each piece ends with steps the reader can apply today.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= ما نكتب عنه ================= -->
+        <div class="mt-10">
+          <h2 class="section-title" data-lang="ar">المواضيع التي نغطيها</h2>
+          <h2 class="section-title" data-lang="en" hidden>What we write about</h2>
+
+          <div class="value-grid">
+            <div class="value-item">
+              <div class="ico">🧠</div>
+              <h3 data-lang="ar">علم النفس</h3>
+              <h3 data-lang="en" hidden>Psychology</h3>
+              <p data-lang="ar">القلق، التحيّزات المعرفية، الذكاء العاطفي، وآليات التفكير والذاكرة والسلوك.</p>
+              <p data-lang="en" hidden>Anxiety, cognitive biases, emotional intelligence, and the mechanics of thinking, memory and behaviour.</p>
+            </div>
+
+            <div class="value-item">
+              <div class="ico">🌱</div>
+              <h3 data-lang="ar">تطوير الذات</h3>
+              <h3 data-lang="en" hidden>Self-development</h3>
+              <p data-lang="ar">بناء العادات، إدارة الوقت والتركيز، الانضباط الذاتي، والتخطيط الشخصي الواقعي.</p>
+              <p data-lang="en" hidden>Habit building, time and focus management, self-discipline and realistic personal planning.</p>
+            </div>
+
+            <div class="value-item">
+              <div class="ico">🧍</div>
+              <h3 data-lang="ar">لغة الجسد</h3>
+              <h3 data-lang="en" hidden>Body language</h3>
+              <p data-lang="ar">الإشارات غير اللفظية، التعبيرات الدقيقة، الحضور والثقة، وقراءة السياق بدل الحكم السريع.</p>
+              <p data-lang="en" hidden>Non-verbal signals, micro-expressions, presence and confidence, and reading context instead of judging quickly.</p>
+            </div>
+
+            <div class="value-item">
+              <div class="ico">🤝</div>
+              <h3 data-lang="ar">العلاقات الإنسانية</h3>
+              <h3 data-lang="en" hidden>Human relationships</h3>
+              <p data-lang="ar">الإنصات الفعّال، الحدود الصحية، إدارة الخلاف، والتواصل في الأسرة والعمل والصداقة.</p>
+              <p data-lang="en" hidden>Active listening, healthy boundaries, conflict management, and communication at home, work and among friends.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= منهجية التحرير ================= -->
+        <div class="info-card mt-10">
+          <h2 class="section-title" data-lang="ar">منهجيتنا في التحرير</h2>
+          <h2 class="section-title" data-lang="en" hidden>Our editorial method</h2>
+
+          <div class="legal-body mt-4">
+            <div data-lang="ar">
+              <ul>
+                <li>كل مقال يُبنى على مفاهيم راسخة في علم النفس، مع تجنّب الادعاءات التي لا تدعمها أدلة.</li>
+                <li>نوضّح دائماً أن المحتوى تثقيفي عام وليس تشخيصاً أو بديلاً عن العلاج النفسي.</li>
+                <li>نكتب النسختين العربية والإنجليزية بمستوى واحد من العمق، لا ترجمة سطحية لإحداهما.</li>
+                <li>نُحدّث المقالات القديمة حين تظهر معلومات أدق، ونضع تاريخ آخر تحديث في أعلى المقال.</li>
+                <li>لا ننشر محتوى يروّج لمنتجات طبية أو مكملات أو خدمات علاجية غير مرخّصة.</li>
+              </ul>
+            </div>
+
+            <div data-lang="en" hidden>
+              <ul>
+                <li>Every article rests on established psychology, avoiding claims that lack evidence.</li>
+                <li>We always state that the content is general education, not a diagnosis or a substitute for therapy.</li>
+                <li>The Arabic and English versions carry the same depth — never a shallow translation of one.</li>
+                <li>We revise older articles when better information emerges and show the last-updated date at the top.</li>
+                <li>We never publish content promoting medical products, supplements or unlicensed treatment services.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= تنبيه طبي ================= -->
+        <div class="article-note mt-10">
+          <h4 data-lang="ar">تنبيه مهم</h4>
+          <h4 data-lang="en" hidden>Important notice</h4>
+          <p data-lang="ar">
+            جميع المواد المنشورة على هذا الموقع لأغراض التثقيف العام فقط، ولا تُعدّ استشارة نفسية أو طبية متخصصة،
+            ولا تُغني عن مراجعة مختصّ مرخّص. إن كنت تمرّ بأزمة نفسية أو تفكر في إيذاء نفسك، يرجى التواصل فوراً مع
+            جهة متخصصة أو خط مساعدة في بلدك.
+          </p>
+          <p data-lang="en" hidden>
+            All material published on this site is for general educational purposes only. It is not psychological or
+            medical advice and does not replace consultation with a licensed professional. If you are experiencing a
+            mental-health crisis or thoughts of self-harm, contact a qualified service or a helpline in your country
+            immediately.
+          </p>
+        </div>
+
+        <!-- ================= ثنائي اللغة ================= -->
+        <div class="info-card mt-10">
+          <h2 class="section-title" data-lang="ar">لماذا موقع ثنائي اللغة؟</h2>
+          <h2 class="section-title" data-lang="en" hidden>Why a bilingual site?</h2>
+
+          <div class="legal-body mt-4">
+            <p data-lang="ar">
+              كثير من المصطلحات النفسية تُترجم بشكل مربك بين العربية والإنجليزية، فيضيع المعنى أو يتشوّه. لهذا جعلنا
+              الموقع ثنائي اللغة بالكامل مع زر تبديل فوري في أعلى كل صفحة: يمكنك قراءة المقال بالعربية، ثم الرجوع
+              للإنجليزية لمقارنة المصطلح نفسه. كما أن الاتجاه (RTL/LTR) والخطوط تتغيّر تلقائياً مع اللغة لتجربة قراءة مريحة.
+            </p>
+            <p data-lang="en" hidden>
+              Psychological terminology is often confusingly translated between Arabic and English, and meaning gets lost.
+              That is why this site is fully bilingual with an instant switcher at the top of every page: read an article
+              in English, then flip to Arabic to compare the same term. Direction (LTR/RTL) and typography change
+              automatically with the language for comfortable reading.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= تواصل ================= -->
+        <div class="info-card mt-10">
+          <h2 class="section-title" data-lang="ar">تواصل معنا</h2>
+          <h2 class="section-title" data-lang="en" hidden>Contact us</h2>
+
+          <div class="legal-body mt-4">
+            <p data-lang="ar">
+              للاقتراحات أو تصحيح معلومة أو الاستفسار عن الإعلان وحقوق المحتوى، راسلنا على:
+            </p>
+            <p data-lang="en" hidden>
+              For suggestions, corrections, or enquiries about advertising and content rights, write to us at:
+            </p>
+            <p class="mt-3">
+              <a href="mailto:azoznan123@gmail.com" dir="ltr" class="font-semibold">azoznan123@gmail.com</a>
+            </p>
+            <p data-lang="ar">نرد عادةً خلال 2–4 أيام عمل.</p>
+            <p data-lang="en" hidden>We usually reply within 2–4 business days.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href="index.html" class="btn btn-primary"><span data-i18n="hero.cta.read"></span></a>
+            <a href="privacy.html" class="btn btn-ghost"><span data-i18n="nav.privacy"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerHost"></div>
+
+  <script src="assets/js/content.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

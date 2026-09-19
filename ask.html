@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اسأل بسرية | مدوّنة وعي</title>
+  <meta name="description" content="زاوية سؤال وجواب مجهولة: اطرح استشارتك بسرية تامة دون تسجيل أي بيانات شخصية، وتصفّح إجابات تثقيفية على أسئلة شائعة — بالعربية والإنجليزية." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="اسأل بسرية | Anonymous Q&A — مدوّنة وعي / Mindful Blog" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 21c-4.5-2.6-8-5.9-8-10.2A4.8 4.8 0 0 1 12 7.6a4.8 4.8 0 0 1 8 3.2C20 15.1 16.5 18.4 12 21Z'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: {
+        50: "#f3f1ff", 100: "#e7e3ff", 200: "#cfc6ff", 400: "#8b7bf0",
+        500: "#6c5ce7", 600: "#5a45d6", 700: "#4634ab", 900: "#241a5c" } } } }
+    };
+  </script>
+
+  <!-- تثبيت الوضع الفاتح/الداكن قبل الرسم لمنع وميض التبديل (FOUC) -->
+  <script>
+    (function () {
+      var m = localStorage.getItem("mindful_mode");
+      if (m !== "dark" && m !== "light") {
+        m = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.mode = m;
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/i18n.js"></script>
+
+  <!-- Google AdSense: فعّل بعد الموافقة
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+</head>
+
+<body data-page="ask"
+      data-title-ar="اسأل بسرية | مدوّنة وعي"
+      data-title-en="Ask Privately | Mindful Blog">
+
+  <div class="bg-scene" aria-hidden="true">
+    <span class="bg-shape s1" data-speed="-0.5"><i></i></span>
+    <span class="bg-shape s2" data-speed="0.35"><i></i></span>
+    <span class="bg-shape s3" data-speed="0.6"><i></i></span>
+    <span class="bg-shape s4" data-speed="-0.25"><i></i></span>
+  </div>
+
+  <div id="headerHost"></div>
+
+  <main>
+    <section class="page-hero tools-hero">
+      <div class="container-narrow">
+        <span class="hero-badge" data-i18n="tools.hero.badge"></span>
+        <h1 data-i18n="page.ask.title"></h1>
+        <p data-i18n="page.ask.subtitle"></p>
+        <p class="tools-disclaimer" data-i18n="tools.disclaimer"></p>
+      </div>
+    </section>
+
+    <!-- ============ الأسئلة والأجوبة المنشورة ============ -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="section-head" style="justify-content:center;text-align:center">
+          <div>
+            <h2 class="section-title" data-i18n="ask.qaTitle"></h2>
+            <p class="section-sub" data-i18n="ask.qaSub"></p>
+          </div>
+        </div>
+        <div id="qaRoot" class="qa-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ نموذج الاستشارة السرّي ============ -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="confidential-banner" data-i18n="ask.banner" data-reveal></div>
+
+        <div class="ask-form-card" data-reveal>
+          <h2 data-i18n="ask.formTitle"></h2>
+
+          <p id="askError" class="ask-error" role="alert" hidden></p>
+
+          <form id="askForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="askTopic" data-i18n="ask.field.topic"></label>
+                <select id="askTopic" name="topic" required>
+                  <option value="" data-i18n="ask.placeholder.topic"></option>
+                  <option value="anxiety" data-i18n="ask.topic.anxiety"></option>
+                  <option value="relationships" data-i18n="ask.topic.relationships"></option>
+                  <option value="selfdev" data-i18n="ask.topic.selfdev"></option>
+                  <option value="bodylang" data-i18n="ask.topic.bodylang"></option>
+                  <option value="productivity" data-i18n="ask.topic.productivity"></option>
+                  <option value="other" data-i18n="ask.topic.other"></option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="askAge" data-i18n="ask.field.age"></label>
+                <select id="askAge" name="age" required>
+                  <option value="" data-i18n="ask.placeholder.age"></option>
+                  <option value="u18" data-i18n="ask.age.u18"></option>
+                  <option value="1825" data-i18n="ask.age.1825"></option>
+                  <option value="2635" data-i18n="ask.age.2635"></option>
+                  <option value="3650" data-i18n="ask.age.3650"></option>
+                  <option value="50p" data-i18n="ask.age.50p"></option>
+                  <option value="prefer" data-i18n="ask.age.prefer"></option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom:18px">
+              <label for="askMessage" data-i18n="ask.field.message"></label>
+              <textarea id="askMessage" name="message" data-i18n-placeholder="ask.placeholder.message" required></textarea>
+            </div>
+
+            <div class="form-consent">
+              <input type="checkbox" id="askConsent" name="consent" />
+              <label for="askConsent" data-i18n="ask.consent"></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+              </svg>
+              <span data-i18n="ask.submit"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerHost"></div>
+
+  <script src="assets/js/content.js" defer></script>
+  <script src="assets/js/tools-data.js" defer></script>
+  <script src="assets/js/tools.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
